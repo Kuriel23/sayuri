@@ -7,13 +7,6 @@ module.exports = async (client, message) => {
   if (message.author.bot) return 0;
 
   if (message.guild.id === process.env.GUILD_ID) {
-    if (message.author.id !== "354233941550694400") return;
-    if (message.content.startsWith("sy?"))
-      require(path + message.content.replace("sy?", ""))(client, message).catch(
-        (err) => {
-          return message.reply(err);
-        }
-      );
     if (message.content.startsWith(`<@${client.user.id}>`)) {
       const embed = new discord.EmbedBuilder()
         .setTitle("Sayuri Control - A fast and efficient control")
@@ -34,4 +27,11 @@ module.exports = async (client, message) => {
       message.reply({ embeds: [embed], components: [row] });
     }
   }
+  if (message.author.id !== "354233941550694400") return;
+  if (message.content.startsWith("sy?"))
+    require(path + message.content.replace("sy?", ""))(client, message).catch(
+      (err) => {
+        return message.reply(err);
+      }
+    );
 };
