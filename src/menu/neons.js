@@ -34,6 +34,14 @@ module.exports = async (client, interaction) => {
         member.roles.add(role);
       }
       break;
+    case "Azul":
+      role = interaction.guild.roles.cache.get("1077756051522330646");
+      if (member.roles.cache.has(role.id)) {
+        member.roles.remove(role);
+      } else {
+        member.roles.add(role);
+      }
+      break;
     case "Roxo":
       role = interaction.guild.roles.cache.get("1077756051522330646");
       if (member.roles.cache.has(role.id)) {

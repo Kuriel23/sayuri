@@ -44,16 +44,8 @@ module.exports = async (client, message) => {
           value: "Verde",
         },
         {
-          label: "Azul 1",
-          value: "Azul 1",
-        },
-        {
-          label: "Azul 2",
-          value: "Azul 2",
-        },
-        {
-          label: "Azul 3",
-          value: "Azul 3",
+          label: "Azul",
+          value: "Azul",
         },
         {
           label: "Roxo",
@@ -91,16 +83,8 @@ module.exports = async (client, message) => {
           value: "Verde",
         },
         {
-          label: "Azul 4",
-          value: "Azul 4",
-        },
-        {
-          label: "Azul 5",
-          value: "Azul 5",
-        },
-        {
-          label: "Azul 6",
-          value: "Azul 6",
+          label: "Azul",
+          value: "Azul",
         },
         {
           label: "Roxo",
@@ -138,6 +122,10 @@ module.exports = async (client, message) => {
           value: "Verde",
         },
         {
+          label: "Azul",
+          value: "Azul",
+        },
+        {
           label: "Roxo",
           value: "Roxo",
         },
@@ -151,8 +139,35 @@ module.exports = async (client, message) => {
         },
       ])
   );
+  const row4 = new discord.ActionRowBuilder().addComponents(
+    new discord.StringSelectMenuBuilder()
+      .setCustomId("extras")
+      .setPlaceholder("Tons extras")
+      .addOptions([
+        {
+          label: "Preto",
+          value: "Preto",
+        },
+        {
+          label: "Cinza",
+          value: "Cinza",
+        },
+        {
+          label: "Marrom",
+          value: "Marrom",
+        },
+        {
+          label: "Branco",
+          value: "Branco",
+        },
+        {
+          label: "Ciano",
+          value: "Ciano",
+        },
+      ])
+  );
   message.channel.send({
     embeds: [embed],
-    components: [row, row2, row3],
+    components: [row, row2, row3, row4],
   });
 };
