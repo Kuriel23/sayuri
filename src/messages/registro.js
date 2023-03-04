@@ -5,9 +5,9 @@ module.exports = async (client, message) => {
   if (message.author.id !== "354233941550694400") return 0;
   const embed = new discord.EmbedBuilder()
     .setColor("#ff3891")
-    .setTitle("Registro!")
+    .setTitle("彡！**Registre-se** ‹𝟹")
     .setDescription(
-      "彡！**Registre-se** ‹𝟹 \n\n> ꒰ ✿ Olá, boas-vindas ao canal de registro! Para sabermos sobre você apenas aperte nas opções abaixo que correspondem com você, como gênero, idade, pronomes, etc!\n\n__Mas caso você não queira fazer, não iremos te obrigar, obrigada pela atenção, até mais meu bem!__"
+      "\n\n> ꒰ ✿ Olá, boas-vindas ao canal de registro! Para sabermos sobre você apenas aperte nas opções abaixo que correspondem com você, como gênero, idade, pronomes, etc!\n\n__Mas caso você não queira fazer, não iremos te obrigar, obrigada pela atenção, até mais meu bem!__"
     )
     .setImage("https://i.imgur.com/VU2LAa5.png");
   const row = new discord.ActionRowBuilder().addComponents(
