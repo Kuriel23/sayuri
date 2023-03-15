@@ -13,8 +13,8 @@ jobs:
     - name: SFTP Upload
       uses: Dylan700/sftp-upload-action@latest
       with:
-        server: zeta.optiklink.com
-        username: tc2j2dfz.b65828b4
+        server: gamma.optiklink.com
+        username: tc2j2dfz.6bd084e9
         password: ${{secrets.FTP_PASSWORD}}
         port: 2022
         uploads: |
@@ -23,4 +23,9 @@ jobs:
           *.git
           */**/*git*
           ./.vscode
-          
+    - name: Pterodactyl-Restart
+      uses: supercrafter100/Pterodactyl-Restart@v1.0
+      with:
+        PTE_PANEL_URL: 'https://control.optiklink.com'
+        PTE_BEARER_TOKEN: ${{ secrets.PTE_BEARER_TOKEN }}
+        PTE_PANEL_ID: '6bd084e9'
